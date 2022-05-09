@@ -3,9 +3,8 @@ var espacoPokemon = $('#poke-info')
 $('#pesquisar').click(function(event){
     event.preventDefault();
 
-    var pkNome = $('#pk-name').val()
-    var nome = pkNome.toLowerCase();
-
+    var nome = $('#pk-name').val().toLowerCase();
+   
     $.ajax({url: `https://pokeapi.co/api/v2/pokemon/${nome}`,
          success: function (resultado){
             console.log(resultado)
